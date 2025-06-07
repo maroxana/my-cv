@@ -1,0 +1,6 @@
+# Extensionless URLs for GitHub Pages
+# This file will redirect /about to /about.html, etc.
+
+# Enable Jekyll-style clean URLs
+# This is a no-op file to enable clean URLs on GitHub Pages
+# You must rename your files as described below.
