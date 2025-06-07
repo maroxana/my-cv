@@ -57,6 +57,11 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
+      <!-- Dark Mode Toggle Button -->
+      <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary ms-3" title="Toggle dark mode">
+        <i class="bi bi-moon"></i>
+      </button>
+
       <div class="header-social-links">
         <a href="https://twitter.com/roxannecom1" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="https://www.facebook.com/cmr209209" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -196,6 +201,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Dark mode toggle logic (shared across all pages)
+    const toggleBtn = document.getElementById('darkModeToggle');
+    if (toggleBtn) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.body.classList.add('dark-mode');
+      }
+      toggleBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        if(document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  </script>
 
 </body>
 

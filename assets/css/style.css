@@ -1151,3 +1151,46 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #181a1b !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .container,
+body.dark-mode .container-fluid {
+  background: transparent !important;
+}
+
+body.dark-mode header,
+body.dark-mode #footer {
+  background: #23272b !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .navbar ul li a {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .navbar ul li a.active,
+body.dark-mode .navbar ul li a:hover {
+  color: #ffd700 !important;
+}
+
+body.dark-mode .btn-about,
+body.dark-mode .btn {
+  background: #23272b !important;
+  color: #ffd700 !important;
+  border-color: #ffd700 !important;
+}
+
+body.dark-mode .header-social-links a {
+  color: #ffd700 !important;
+}
+
+body.dark-mode .logo a {
+  color: #ffd700 !important;
+}
+
+/* Add more dark mode overrides as needed for your design */
